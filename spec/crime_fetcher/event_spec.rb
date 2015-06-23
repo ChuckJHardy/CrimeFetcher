@@ -30,6 +30,12 @@ describe CrimeFetcher::Event do
     end
   end
 
+  describe '#month' do
+    it 'returns month' do
+      expect(instance.month).to eq(event[:month])
+    end
+  end
+
   describe '#location' do
     it 'returns location object' do
       expect(instance.location).to be_an_instance_of(CrimeFetcher::Location)

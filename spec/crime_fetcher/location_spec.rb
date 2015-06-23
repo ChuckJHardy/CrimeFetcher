@@ -14,6 +14,12 @@ describe CrimeFetcher::Location do
     }
   end
 
+  describe '#name' do
+    it 'returns name' do
+      expect(instance.name).to eq(location[:street][:name])
+    end
+  end
+
   describe '#latitude' do
     it 'returns latitude' do
       expect(instance.latitude).to eq(location[:latitude])

@@ -4,6 +4,10 @@ class CrimeFetcher
       @location = location
     end
 
+    def name
+      street.fetch(:name)
+    end
+
     def latitude
       location.fetch(:latitude)
     end
@@ -15,5 +19,11 @@ class CrimeFetcher
     protected
 
     attr_reader :location
+
+    private
+
+    def street
+      location.fetch(:street)
+    end
   end
 end

@@ -12,6 +12,10 @@ class CrimeFetcher
       event.fetch(:category)
     end
 
+    def month
+      event.fetch(:month)
+    end
+
     def location
       Location.new(event.fetch(:location))
     end
