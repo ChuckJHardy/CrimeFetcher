@@ -2,6 +2,17 @@
 
 Wrapper for the Police UK API.
 
+## Documentation
+
+The [API](https://data.police.uk/docs/) provides a rich data source for information, including:
+
+* Neighbourhood team members `Todo`
+* Upcoming events `Todo`
+* Street-level crime and outcome data `Covered in CrimeFetcher`
+* Nearest police stations `Todo`
+
+The API is implemented as a standard JSON web service using HTTP GET and POST requests. Full request and response examples are provided in the documentation.
+
 ## Installation
 
 Add this line to your application's Gemfile:
