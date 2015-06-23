@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Charles J Hardy']
   spec.email         = ['chuckjhardy@gmail.com']
 
-  spec.summary       = "Wrapper for the Police UK API"
-  spec.description   = "Wrapper for the Police UK API"
+  spec.summary       = 'Wrapper for the Police UK API'
+  spec.description   = 'Wrapper for the Police UK API'
   spec.homepage      = 'https://bitbucket.org/ChuckJHardy/crime-fetcher'
   spec.license       = 'MIT'
 

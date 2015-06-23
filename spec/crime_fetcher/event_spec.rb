@@ -5,22 +5,22 @@ describe CrimeFetcher::Event do
   let(:instance) { [event].map(&described_class).first }
   let(:event) do
     {
-      category: "anti-social-behaviour",
-      location_type: "Force",
+      category: 'anti-social-behaviour',
+      location_type: 'Force',
       location: {
-        latitude: "52.622258",
+        latitude: '52.622258',
         street: {
-          id: 1319930,
-          name: "On or near Victoria Park"
+          id: 131_993_0,
+          name: 'On or near Victoria Park'
         },
-        longitude: "-1.119741"
+        longitude: '-1.119741'
       },
-      context: "",
+      context: '',
       outcome_status: nil,
-      persistent_id: "",
-      id: 20601161,
-      location_subtype: "",
-      month: "2013-01"
+      persistent_id: '',
+      id: 206_011_61,
+      location_subtype: '',
+      month: '2013-01'
     }
   end
 

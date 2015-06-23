@@ -5,11 +5,11 @@ describe CrimeFetcher::Location do
   let(:instance) { described_class.new(location) }
   let(:location) do
     {
-      latitude: "52.622258",
-      longitude: "-1.119741",
+      latitude: '52.622258',
+      longitude: '-1.119741',
       street: {
-        id: 1319930,
-        name: "On or near Victoria Park"
+        id: 131_993_0,
+        name: 'On or near Victoria Park'
       }
     }
   end
