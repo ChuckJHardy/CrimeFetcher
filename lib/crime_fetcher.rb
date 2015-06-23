@@ -9,13 +9,12 @@ require 'crime_fetcher/street_dto'
 class CrimeFetcher
   extend Configure
 
-  def initialize(lat:, lng:, date: Date.today - 60)
+  def initialize(lat:, lng:)
     @lat = lat
     @lng = lng
-    @date = date
   end
 
   def street
-    Street.new StreetDTO.get(lat: @lat, lng: @lng, date: @date)
+    Street.new StreetDTO.get(lat: @lat, lng: @lng)
   end
 end

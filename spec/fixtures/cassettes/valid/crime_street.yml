@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://data.police.uk/api/crimes-street/all-crime?date=2015-04&lat=52.629729&lng=-1.131592
+    uri: https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 23 Jun 2015 23:28:29 GMT
+      - Tue, 23 Jun 2015 23:33:25 GMT
       Server:
       - nginx
       Vary:
@@ -1955,5 +1955,5 @@ http_interactions:
         or near Lower Free Lane"},"longitude":"-1.130274"},"context":"","outcome_status":{"category":"Under
         investigation","date":"2015-04"},"persistent_id":"70427f5ea11d3b4706f80b0db98671e6461eec70fc375fc95650f18e6e1a3237","id":40407778,"location_subtype":"","month":"2015-04"}]'
     http_version: 
-  recorded_at: Tue, 23 Jun 2015 23:28:29 GMT
+  recorded_at: Tue, 23 Jun 2015 23:33:24 GMT
 recorded_with: VCR 2.9.3

@@ -2,7 +2,6 @@ require 'simplecov'
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'crime_fetcher'
-require_relative './support/factory'
 
 CrimeFetcher.configure do |config|
   config.verbose = false
@@ -23,6 +22,4 @@ RSpec.configure do |config|
     mocks.syntax = :expect
     mocks.verify_partial_doubles = true
   end
-
-  config.include Factory
 end

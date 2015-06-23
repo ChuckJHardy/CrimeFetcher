@@ -1,13 +1,12 @@
 require 'vcr_helper'
 
 describe CrimeFetcher do
-  let(:instance) { described_class.new(lat: lat, lng: lng, date: date) }
-  let(:lat) { '52.629729' }
-  let(:lng) { '-1.131592' }
+  let(:instance) { described_class.new(lat: lat, lng: lng) }
 
   describe '#street' do
     context 'when valid' do
-      let(:date) { Date.today - 60 }
+      let(:lat) { '52.629729' }
+      let(:lng) { '-1.131592' }
 
       it 'returns street object' do
         VCR.use_cassette('valid/crime_street') do
@@ -17,7 +16,8 @@ describe CrimeFetcher do
     end
 
     context 'when invalid' do
-      let(:date) { Date.today }
+      let(:lat) { nil }
+      let(:lng) { '-1.131592' }
 
       it 'raises error' do
         VCR.use_cassette('invalid/crime_street') do

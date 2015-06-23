@@ -12,7 +12,7 @@ class CrimeFetcher
 
     def get(url:, options: {})
       connection.get(URI.escape(url), options).tap do |response|
-        raise CrimeFetcher::Invalid, response.body if response.status == 500
+        raise CrimeFetcher::Invalid, response.body if response.status != 200
       end
     end
 

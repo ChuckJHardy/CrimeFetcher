@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://data.police.uk/api/crimes-street/all-crime?date=2015-06&lat=52.629729&lng=-1.131592
+    uri: https://data.police.uk/api/crimes-street/all-crime?lat=&lng=-1.131592
     body:
       encoding: US-ASCII
       string: ''
@@ -15,15 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: INTERNAL SERVER ERROR
+      code: 400
+      message: BAD REQUEST
     headers:
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 23 Jun 2015 23:28:29 GMT
+      - Tue, 23 Jun 2015 23:33:25 GMT
       Server:
       - nginx
       Content-Length:
@@ -34,5 +34,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 23 Jun 2015 23:28:28 GMT
+  recorded_at: Tue, 23 Jun 2015 23:33:24 GMT
 recorded_with: VCR 2.9.3
