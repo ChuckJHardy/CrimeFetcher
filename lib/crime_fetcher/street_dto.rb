@@ -1,21 +1,25 @@
 class CrimeFetcher
   class StreetDTO < DTO
     def endpoint
-      "4d393eu4?apikey=#{api_key}&kimpath1=#{type}&kimpath2=#{page}"
+      "crimes-street/all-crime?lat=#{lat}&lng=#{lng}&date=#{formatted_date}"
     end
 
     private
 
-    def type
-      options.fetch(:type)
+    def lat
+      options.fetch(:lat)
     end
 
-    def page
-      options.fetch(:page)
+    def lng
+      options.fetch(:lng)
     end
 
-    def api_key
-      CrimeFetcher.configuration.api_key
+    def date
+      options.fetch(:date)
+    end
+
+    def formatted_date
+      date.strftime('%Y-%m')
     end
   end
 end
