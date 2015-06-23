@@ -3,13 +3,17 @@ require 'faraday_middleware'
 require 'faraday_middleware/multi_json'
 
 class CrimeFetcher
+  Invalid = Class.new(StandardError)
+
   class API
     def self.get(*args)
       new.get(*args)
     end
 
     def get(url:, options: {})
-      connection.get(URI.escape(url), options)
+      connection.get(URI.escape(url), options).tap do |response|
+        raise CrimeFetcher::Invalid, response.body if response.status == 500
+      end
     end
 
     private
