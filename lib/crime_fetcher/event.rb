@@ -20,6 +20,10 @@ class CrimeFetcher
       Location.new(event.fetch(:location))
     end
 
+    def as_hash
+      CrimeFetcher::EventAdapter.adapt(self)
+    end
+
     protected
 
     attr_reader :event

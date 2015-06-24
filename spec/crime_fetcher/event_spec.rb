@@ -41,4 +41,10 @@ describe CrimeFetcher::Event do
       expect(instance.location).to be_an_instance_of(CrimeFetcher::Location)
     end
   end
+
+  describe '#as_hash' do
+    it 'returns hash' do
+      expect(instance.as_hash).to be_a(Hash)
+    end
+  end
 end

@@ -42,6 +42,9 @@ Find Exchange Rate:
     crime_fetcher.street
     # => #<CrimeFetcher::Street:0x007f985c021f10>
 
+    crime_fetcher.street.as_hash
+    # => { ... }
+
 ## Testing
 
     # Includes Rubocop
