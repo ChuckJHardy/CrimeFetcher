@@ -28,6 +28,7 @@ class CrimeFetcher
 
     def location_attributes
       {
+        address: event.location.name,
         latitude: event.location.latitude,
         longitude: event.location.longitude,
       }
