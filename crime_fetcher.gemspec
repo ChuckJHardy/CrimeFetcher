@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'crime_fetcher'
-  spec.version       = '0.0.3'
+  spec.version       = '0.0.4'
   spec.authors       = ['Charles J Hardy']
   spec.email         = ['chuckjhardy@gmail.com']
 
   spec.summary       = 'Wrapper for the Police UK API'
   spec.description   = 'Wrapper for the Police UK API'
-  spec.homepage      = 'https://bitbucket.org/ChuckJHardy/crime-fetcher'
+  spec.homepage      = 'https://github.com/ChuckJHardy/CrimeFetcher'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

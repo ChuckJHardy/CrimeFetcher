@@ -17,7 +17,7 @@ The API is implemented as a standard JSON web service using HTTP GET and POST re
 
 Add this line to your application's Gemfile:
 
-    gem 'crime-fetcher', bitbucket: 'InsertCoffee/crime-fetcher'
+    gem 'crime-fetcher', github: 'ChuckJHardy/CrimeFetcher'
 
 And then execute:
 
@@ -58,7 +58,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/crime-fetcher/fork )
+1. Fork it ( https://github.com/[my-github-username]/CrimeFetcher/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
