@@ -1,4 +1,4 @@
-# Crime Fetcher
+# Crime Fetcher - [ ![Codeship Status for ChuckJHardy/CrimeFetcher](https://codeship.com/projects/4a6dea20-1058-0133-f5b4-5a9b1173a114/status?branch=master)](https://codeship.com/projects/92019)
 
 Wrapper for the Police UK API.
 
