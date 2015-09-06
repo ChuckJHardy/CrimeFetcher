@@ -5,8 +5,6 @@ require 'faraday_middleware/multi_json'
 require 'crime_fetcher/validate'
 
 class CrimeFetcher
-  Invalid = Class.new(StandardError)
-
   class API
     def self.get(*args)
       new.get(*args)
