@@ -1,3 +1,4 @@
+require 'crime_fetcher/error'
 require 'crime_fetcher/configuration'
 require 'crime_fetcher/dto'
 require 'crime_fetcher/street_dto'
