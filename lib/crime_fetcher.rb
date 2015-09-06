@@ -13,6 +13,8 @@ require 'crime_fetcher/street_dto'
 class CrimeFetcher
   extend Configure
 
+  BadRequest = Class.new(Error)
+
   def initialize(lat:, lng:)
     @lat = lat
     @lng = lng

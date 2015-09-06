@@ -2,6 +2,8 @@ require 'faraday'
 require 'faraday_middleware'
 require 'faraday_middleware/multi_json'
 
+require 'crime_fetcher/validate'
+
 class CrimeFetcher
   Invalid = Class.new(StandardError)
 
@@ -12,7 +14,13 @@ class CrimeFetcher
 
     def get(url:, options: {})
       connection.get(URI.escape(url), options).tap do |response|
-        fail CrimeFetcher::Invalid, response.body if response.status != 200
+        Validate.with(
+          method: :get,
+          domain: domain,
+          url: url,
+          options: options,
+          response: response
+        )
       end
     end
 
