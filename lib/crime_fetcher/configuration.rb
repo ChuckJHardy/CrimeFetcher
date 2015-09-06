@@ -12,11 +12,13 @@ class CrimeFetcher
     private
 
     class Configuration
-      attr_accessor :domain, :verbose
+      attr_accessor :domain, :verbose, :log, :logger
 
       def initialize
         self.domain = 'https://data.police.uk/api/'
         self.verbose = false
+        self.log = false
+        self.logger = Logger.new(STDOUT)
       end
     end
   end

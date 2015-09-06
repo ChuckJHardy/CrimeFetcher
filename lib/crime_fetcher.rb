@@ -1,3 +1,5 @@
+require 'logger'
+
 require 'crime_fetcher/error'
 require 'crime_fetcher/configuration'
 require 'crime_fetcher/dto'
