@@ -26,11 +26,16 @@ And then execute:
 ## Configuration
 
     CrimeFetcher.configure do |config|
+      config.domain = "https://data.police.uk/api/v2"
       config.verbose = true
+      config.log = true
+      config.logger = Rails.logger
     end
 
-* `domain` sets the base uri for Kimonolabs `https://data.police.uk/api/`
+* `domain` sets the base url `https://data.police.uk/api/`
 * `verbose` sets the logger level `false`
+* `log` should log message be logged `false`
+* `logger` Logger object. `Logger`
 
 ## Usage
 

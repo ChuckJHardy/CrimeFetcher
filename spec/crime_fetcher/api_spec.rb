@@ -28,17 +28,5 @@ describe CrimeFetcher::API do
         subject
       end
     end
-
-    context 'when invalid' do
-      let(:response) do
-        instance_double(Faraday::Response, status: 500, body: 'Oops')
-      end
-
-      it 'raises error' do
-        allow(connection).to receive(:get) { response }
-
-        expect { subject }.to raise_error(CrimeFetcher::Invalid, 'Oops')
-      end
-    end
   end
 end

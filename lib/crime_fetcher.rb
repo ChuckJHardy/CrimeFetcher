@@ -1,3 +1,6 @@
+require 'logger'
+
+require 'crime_fetcher/error'
 require 'crime_fetcher/configuration'
 require 'crime_fetcher/dto'
 require 'crime_fetcher/street_dto'
@@ -9,6 +12,8 @@ require 'crime_fetcher/street_dto'
 
 class CrimeFetcher
   extend Configure
+
+  BadRequest = Class.new(Error)
 
   def initialize(lat:, lng:)
     @lat = lat

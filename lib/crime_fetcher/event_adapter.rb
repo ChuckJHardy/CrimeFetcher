@@ -12,7 +12,7 @@ class CrimeFetcher
       {
         category: event.category,
         on: Date.parse(month),
-        location_attributes: location_attributes,
+        location_attributes: location_attributes
       }
     end
 
@@ -30,7 +30,7 @@ class CrimeFetcher
       {
         address: event.location.name,
         latitude: event.location.latitude,
-        longitude: event.location.longitude,
+        longitude: event.location.longitude
       }
     end
   end

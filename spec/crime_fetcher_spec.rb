@@ -21,7 +21,7 @@ describe CrimeFetcher do
 
       it 'raises error' do
         VCR.use_cassette('invalid/crime_street') do
-          expect { instance.street }.to raise_error(CrimeFetcher::Invalid)
+          expect { instance.street }.to raise_error(CrimeFetcher::BadRequest)
         end
       end
     end

@@ -11,6 +11,9 @@ describe CrimeFetcher::DTO do
 
     before do
       allow_any_instance_of(described_class).to receive(:endpoint) { endpoint }
+
+      CrimeFetcher.configuration.log = true
+      expect(CrimeFetcher.configuration.logger).to receive(:info)
     end
 
     it 'calls off to API and returns response body' do
@@ -18,6 +21,10 @@ describe CrimeFetcher::DTO do
         .with(url: endpoint, options: options) { double(body: {}) }
 
       expect(subject).to eq({})
+    end
+
+    after do
+      CrimeFetcher.configuration.log = false
     end
   end
 
