@@ -29,12 +29,12 @@ describe CrimeFetcher::EventAdapter do
 
   let(:adapted_hash) do
     {
-      category: "anti-social-behaviour",
+      category: 'anti-social-behaviour',
       on: Date.parse(event_attributes[:month] + '-01'),
       location_attributes: {
-        address: "On or near Victoria Park",
-        latitude: "52.622258",
-        longitude: "-1.119741"
+        address: 'On or near Victoria Park',
+        latitude: '52.622258',
+        longitude: '-1.119741'
       }
     }
   end
