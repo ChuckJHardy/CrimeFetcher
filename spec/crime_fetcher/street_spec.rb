@@ -32,4 +32,10 @@ describe CrimeFetcher::Street do
       end
     end
   end
+
+  describe '#count' do
+    it 'returns number of events' do
+      expect(instance.count).to eq(events.count)
+    end
+  end
 end
