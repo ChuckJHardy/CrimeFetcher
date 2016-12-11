@@ -10,6 +10,10 @@ class CrimeFetcher
       events.each(&block)
     end
 
+    def count
+      @events.count
+    end
+
     def events
       @events.map(&CrimeFetcher::Event)
     end
